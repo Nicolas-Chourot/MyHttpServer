@@ -17,7 +17,7 @@ function sendRequestedFile(filePath, res){
                 if (contentType == 'text/html') {
                     // Page not found
                     fs.readFile(path.join(__dirname, wwwroot, '404.html'), (err, content) => { 
-                        // we assume here there will no error ;-)
+                        // we assume here there will be no error ;-)
                         res.writeHead(200, {'Content-Type' : 'text/html'});
                         res.end(content,'utf8');
                     });
